@@ -1,0 +1,22 @@
+// Define your class as global
+// Define methods as global static
+// Add annotations to the class and methods
+
+//exp: https://youtInstance.salesforce.com/services/apexrest/Account/*
+
+@RestResource(urlMapping='/Account/*')
+global with sharing class MyRestResource {
+    
+    @HttpGet
+    global static Account getRecord() {
+        //Add your code
+    }
+}
+
+*/ 
+Annotation  -  Action  -  Details
+@HttpGet    -  Read    -  Reads or retrieves records
+@HttpPost   -  Create  -  Create records
+@HttpDelete -  Delete  -  Delete records
+@HttpPut    -  Upsert  -  Create if doesnt exists, and if it does, update records
+@HttpPatch  -  Update  -  Update existing records
